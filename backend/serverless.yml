@@ -96,7 +96,7 @@ functions:
             summary: "Create a new todo item"
             description: "Create a new todo item"
             requestModels:
-              "application/json": CreateTodoRequest
+              "application/json": src/request/CreateTodoRequest
           reqValidatorName: RequestBodyValidator
     iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-create-todo-role-${self:provider.stage}
     iamRoleStatements:
@@ -124,7 +124,7 @@ functions:
             summary: "Update a todo item"
             description: "Update a todo item"
             requestModels:
-              "application/json": UpdateTodoRequest
+              "application/json": src/request/UpdateTodoRequest
           reqValidatorName: RequestBodyValidator
     iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-update-todo-role-${self:provider.stage}
     iamRoleStatements:
